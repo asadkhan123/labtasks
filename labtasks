@@ -1,0 +1,995 @@
+1) ford car
+public class FC {
+
+	public static void main(String[] args) {
+
+		Classes obj1 = new Classes();
+		
+		obj1.colour1="Yellow";
+		obj1.type1="Coupe";
+		obj1.model1="Mustang";
+		obj1.cylinders1=6;
+		obj1.colour2="Orange";
+		obj1.type2="Coupe";
+		obj1.model2="Focus";
+		obj1.cylinders2=4;
+		
+		
+		
+		System.out.println("Color: "+obj1.colour1);
+		System.out.println("Type:" +obj1.type1);
+		System.out.println("Model: " +obj1.model1);
+		System.out.println("No. of Cylinders: " +obj1.cylinders1);
+		System.out.println("");
+		System.out.println("Color: "+obj1.colour2);
+		System.out.println("Type:" +obj1.type2);
+		System.out.println("Model: " +obj1.model2);
+		System.out.println("No. of Cylinders: " +obj1.cylinders2);
+		
+	}
+
+}
+
+
+public class Classes {
+	
+	public String colour1,colour2,type1,type2,model1,model2;
+	public int cylinders1,cylinders2;
+		
+}
+
+
+2)Person
+
+public class Person {
+
+	public static void main(String[] args) {
+
+		Classes obj1 = new Classes();
+		
+		obj1.n1="Ann";
+		obj1.n2="Adam";
+		obj1.h1="5'4";
+		obj1.h2="5'9";
+		obj1.a1=21;
+		obj1.a2=24;
+		
+		System.out.println("Name: "+obj1.n1);
+		System.out.println("Height: "+obj1.h1);
+		System.out.println("Age: "+obj1.a1);
+		System.out.println("");
+		System.out.println("Name: "+obj1.n2);
+		System.out.println("Height: "+obj1.h2);
+		System.out.println("Age: "+obj1.a2);
+
+				
+	}
+
+}
+
+
+public class Classes {
+
+	public String n1,n2,h1,h2;
+	public int a1,a2;
+}
+
+
+3)Shipping box
+
+public class SH {
+
+	public static void main(String[] args) {
+		classes obj1=new classes();
+		
+		obj1.sname1="Julie";
+		obj1.rname1="Jill";
+		obj1.sname2="Jim";
+		obj1.rname2="John";
+		int cpp1=2;
+		obj1.weight1=5;
+		int cpp2=5;
+		obj1.weight2=10;
+		
+		
+		
+		System.out.println("Sender: "+obj1.sname1);
+		System.out.println("Reciever: "+obj1.rname1);
+		System.out.println("Weight " + obj1.weight1);
+		System.out.println("Shipping Cost " + obj1.shippingcost1(cpp1));
+		System.out.println("");
+		System.out.println("Sender: "+obj1.sname2);
+		System.out.println("Reciever: "+obj1.rname2);
+		System.out.println("Weight " + obj1.weight2);
+		System.out.println("Shipping Cost " + obj1.shippingcost2(cpp2));
+
+		
+	}
+
+}
+
+
+public class classes {
+
+	public String sname1,rname1,sname2,rname2;
+	public int weight1,weight2;
+
+	
+	public int shippingcost1(int cpp1)
+	{
+		return cpp1*weight1;
+	}
+	
+	4)Shapedone
+	public class shapedone {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		shape [ ] shapeList = new shape[5];
+        shapeList[0] = new oval(4,10);
+        shapeList[1] = new rectangle(10,8);
+        shapeList[2] = new trian(5.0,4.0,10.0);
+        shapeList[3] = new circle(7);
+        shapeList[4] = new square(5);
+        for (int i = 0; i < shapeList.length; i++)  {
+        	
+        	System.out.print (shapeList[i].str + "  " );
+	
+        	
+        	System.out.print (shapeList[i].area( ) + "  "  );
+	
+        	
+        	System.out.print (shapeList[i].colour() + "  ") ;
+        	
+        	System.out.println (shapeList[i].perimeter( ));
+
+		
+		
+		
+
+}
+	}
+}
+
+
+
+public abstract class  shape {
+    public String str;
+	
+    
+    public abstract double area();
+	
+    
+    public abstract double perimeter();
+	
+    
+    public abstract String colour();
+	
+    
+    public shape(String name){
+    	
+    
+    	str =name;
+    	
+    }
+
+}
+
+
+public class rectangle extends shape {
+
+	public String naam;
+public double len,wid;
+
+public rectangle (double len,double wid){
+	super("Rectangle");
+this.len=len;
+this.wid=wid;
+}
+
+public rectangle (String name){
+	super("square");
+}
+
+public double area (){return len * wid;}
+public double perimeter(){ return 2*(len+wid);}
+public String colour (){return "yelllow";}
+
+}
+
+
+
+public class square extends rectangle {
+
+
+public square(double side){
+super("Square");
+ len = wid = side;
+
+}
+
+public String colour(){return "red";}
+}
+
+
+public class circle extends shape  {
+public double r;
+
+public circle (double r){
+	
+	
+	
+	super("Circle");
+	this.r = r;
+	
+}
+
+public circle (String name){
+	super("Oval");
+}
+
+
+
+public double area (){return 3.142*r*r;}
+public double perimeter (){return 2*3.142*r;}
+public String colour() {return "Black";}
+}
+
+
+public class trian extends shape {
+
+public double a,b,c;	
+
+public trian( double a, double b, double c){
+	super("Triangle");
+this.a=a;
+this.b=b;
+this.c=c;
+
+}
+public double area(){return 0.5*a*b;}
+public double perimeter(){return a+b+c;}
+public String colour(){return "Golden";}
+
+
+}
+
+	
+	5)Scanner
+	import java.util.Scanner;
+
+public class Main {
+	public static void main (String[] args){
+		
+		
+		int wid, len;
+		
+		Scanner scn = new Scanner(System.in);
+		
+		
+		//Shape objShape = new Shape("NOSHAPE");
+		//System.out.println(objShape.ShapeNAme);
+
+		
+		
+		System.out.println("Enter Width For Rect");
+		wid = scn.nextInt();
+		System.out.println("Enter Length For Rect");
+		len = scn.nextInt();
+		Rectangle objRectangle = new Rectangle(wid, len, "RECTANGLE");		
+		System.out.println(objRectangle.ShapeNAme);
+		
+		
+		System.out.println("Enter Side For Sqaure");
+		wid = scn.nextInt();
+		Square objsquare = new Square(wid);		
+		System.out.println(objsquare.ShapeNAme);
+
+		//System.out.println("Enter Length");
+		//len = scn.nextInt();
+		
+		
+		
+		
+		///Square objSquare = new Square();
+		
+		
+	}
+
+}
+
+
+public class Shape {
+	
+	public String ShapeNAme;
+	
+	
+	public Shape (String ShapeNAme){
+		this.ShapeNAme = ShapeNAme;
+		
+	}
+
+}
+
+
+
+public class Rectangle extends Shape {
+	int length;
+	int width;
+	
+	
+	public Rectangle (int len, int wid, String ShapeName){
+		
+		
+		super(ShapeName);
+		
+	}
+	
+	
+
+}
+
+
+public class Circle extends Square{
+	
+	int radius;
+	public Circle (){
+		
+	}
+	
+
+}
+
+
+public class Square extends Rectangle{
+	
+	public Square(int side){
+		
+		
+		super(side, side, "SQUARE");
+		
+	}
+	
+	
+
+}
+
+
+
+6)Clock and Alarmclock
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		alarmclock obj3 = new alarmclock();
+		obj3.setAlarm(0,59);
+		
+clock obj = new clock();
+int x=0;
+
+
+		while(x <= 3600)
+		{
+			obj3.tick();
+			x++;
+		}
+
+	}
+
+}
+
+Counter
+
+
+public class counter {
+private int count, base;
+public counter(int baseval){
+	base= baseval;
+	
+}
+public void increment(){
+	
+	count++;
+	if(count == base)
+	{
+		reset();
+	}
+	
+	
+}
+public void reset(){
+	count = 0;}
+public int viewcount(){
+	return count;
+}
+}
+
+
+Clock
+
+public class clock {
+private counter hours,mins,secs;
+public clock(){
+	hours= new counter(24);
+	mins = new counter(60);
+	secs = new counter(60);
+}
+public int viewhr(){
+	return hours.viewcount();
+}
+public int viewmin(){
+	return mins.viewcount();
+}
+public void tick( ) {
+	
+	
+	System.out.println(hours.viewcount() +  ":" + mins.viewcount() + ":" + secs.viewcount());
+	
+	secs.increment();
+	if (secs.viewcount() == 0){
+		mins.increment();
+		if ((secs.viewcount() == 0)&&(mins.viewcount() == 0))
+			hours.increment();
+	}}
+}
+
+Alarmclock
+
+public class alarmclock extends clock {
+private boolean alarmOn;
+private int hrset, minset;
+public alarmclock(){alarmOn = false;}
+public void setAlarm(int hr, int min){
+	hrset = hr; minset = min; alarmOn = true;
+
+}
+public void tick(){
+	super.tick();
+	if ((viewhr() == hrset)&&(viewmin() == minset)&&alarmOn){
+		System.out.println("ring,ring,ring");
+	}
+}
+}
+
+7)interface
+public class maiin {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		sportscar obj7 = new sportscar();
+		obj7.start();
+		obj7.stop();
+		obj7.turn();
+	}
+
+}
+
+
+public interface drive {
+public void start();
+public void stop();
+public void turn();
+}
+
+
+public class sportscar implements drive {
+public void start()
+{
+	System.out.println("Start");
+}
+public void stop()
+{
+	System.out.println("stop");
+}
+public void turn()
+{
+	System.out.println("turn");
+}
+}
+
+8)Structure and enum
+import java.util.Scanner;
+public class MyMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner obj1 = new Scanner (System.in);
+		
+	
+		
+		SportCar obj = new SportCar();
+		obj.start();
+		
+		/*int y;
+		structure[] str = new structure[12]; 
+		for(int i=0; i<12; i++)
+		{
+			str[i] = new structure(x, y);
+		}*/
+		
+		structure st = new structure(2,4);
+		
+		System.out.println(st.x+" "+st.y);
+		
+		
+		weekdays Day1,Day2;
+		Day1 = weekdays.Sat;
+		Day2 = weekdays.Sun;
+		
+	
+		System.out.println(Day1);
+		System.out.println(Day2);
+	}
+
+}
+
+Structure
+public class structure {
+
+	public int x;
+	public int y;
+	
+	
+	public structure(int x, int y)
+	{
+		this.x = x;
+		this.y = y;
+	}
+	
+	
+}
+
+9)Linklist
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+//MyLinkedList MyList1 = new MyLinkedList();
+		
+		//MyList1.add(12);
+		
+		/*Node list = new Node();
+		Node mynode = new Node();
+		
+		
+		mynode.num=6;
+		mynode.self=mynode;
+		mynode.next=null;
+		mynode.previous=list;
+		
+		
+		list.num=4;
+		list.self=list;
+		list.next=mynode;
+		list.previous=null;
+		
+		
+		
+		
+		while (list.next!=null)
+		{
+			System.out.println(list.num);
+			list=list.next;
+		}*/
+		
+	/*	Node A = new Node();
+		Node B = new Node();
+		Node C = new Node();
+		
+		A.num=3;
+		B.num=2;
+		C.num=6;
+		
+		A.self=A;
+		A.next=B;
+		A.previous=null;
+		
+		B.self=B;
+		B.next=C;
+		B.previous=A;
+		
+		C.self=C;
+		C.next=null;
+		C.previous=B; */
+			
+
+	MyLinkedList ABC =new MyLinkedList();
+		
+	ABC.add(3);	
+  /*ABC.update();*/
+	ABC.search();
+		
+	}
+
+}
+
+
+public class Node {
+
+
+	
+
+	public int  num;
+	public Node next; 
+	public Node self;
+	public Node previous;
+	
+
+	}
+	
+
+
+public abstract class MyList {
+
+
+
+	public abstract void add(int num);
+	public abstract void remove();
+	public abstract void update();
+	public abstract void search();
+
+
+
+}
+
+
+
+public class MyLinkedList extends MyList  {
+
+
+
+	private Node list;
+	private Node First = null;
+	private Node Last = null;
+	
+	public void add(int num){
+		
+		list = new Node();
+		list.num=num;
+		list.self=list;
+		list.next=null;
+		list.previous=null;
+		
+		if(First == Last && Last != null)
+		{
+			First.next = list;
+		}
+		
+		
+		if(First == null)
+		{
+			First = list;
+		}
+		
+		if(Last == null)
+		{
+			Last = list;
+		}
+		
+		System.out.println(list.num);
+		
+	}
+	public void remove(){
+	
+	list = list.previous;
+	
+	list.next= null;
+	
+	
+	}
+	public void update(){
+		
+		while(Last.next == null){
+			
+			if(list.self==list){
+				list.num=7;
+			}
+			
+			System.out.println(list.num);
+			
+		}
+		
+		list =list.next;
+		
+	}
+	public void search(){
+
+		
+		
+		while(list.next == null){
+			
+			if(list.num==4){
+			System.out.println("this node"+list);
+			}
+			else
+			{
+				System.out.println("does not exist");
+			}
+		
+			list =list.next;
+		}
+	}
+}
+
+10)Sorting
+public class Main {
+	public static void main(String[] args)
+	{
+
+		linklist MyList = new linklist();
+
+		MyList.add(2);
+		MyList.add(1);
+		MyList.add(8);
+	MyList.add(4);
+		MyList.add(0);
+		MyList.add(7);
+		MyList.add(3);
+		MyList.index(1);
+		
+		
+		//System.out.println(MyList.h);
+		//MyList.remove();
+		
+		System.out.println(MyList.i);
+		
+		MyList.display();	
+}}
+
+
+public class node {
+
+public int num;
+	public node previous;
+	public node next;
+	public node address;
+	
+	public node(){
+		num=0;
+		next=null;
+	}
+	public node(int num,node next,node previous)
+	{
+		this.num=num;
+		this.next=next;
+		this.previous=previous;
+	}
+}
+
+public abstract class list {
+	
+	
+	public abstract void add(int num);
+	public abstract void remove();
+	public abstract void sort();
+	public abstract void search(int num);
+	public abstract void display();
+	public abstract void update(int num,int pos,int val);
+
+}
+
+
+public class linklist extends list{
+
+	public node list;
+	public node First = null;
+	public node Last = null;
+	public int i=0;
+	public int j;
+    public int h;
+    public int num;
+    
+	
+	public void add(int num){
+	
+		node list=new node(num,null,null);
+		
+		i++;
+		if (First==null){
+ 			First=list;
+ 			Last=First;
+ 		}
+		else
+ 		{
+ 			Last.next=list;
+ 			list.previous=Last;
+ 			Last=list;
+ 			
+ 		}
+		sort();
+     }
+	/*public void addp(int num){
+		sort();
+		node list=new node(num,null,null);	
+		
+		node ptr=First;
+		for(j=1;j<i;j++){
+			
+			if(ptr.num>num)
+			{
+				node tmp=ptr.next;
+				ptr.next=list;
+				list.next=tmp;
+				
+			}
+			
+			ptr=ptr.next;
+		}
+		
+		i++;
+	}*/
+
+public int index(int num){
+	
+		
+		node ptr=First;
+		
+		for(j=1;j<=i;j++){
+			
+			if(ptr.num==num)
+			{
+			h=j;
+			}
+			ptr=ptr.next;}
+		return h;
+	}
+   
+	
+	public void remove (){
+		node ptr=First;
+		Last=Last.previous;
+		Last.next=null;
+		i--;
+	}
+	
+	public void search(int num){
+		index(num);
+		node ptr=First;
+		for(j=1;j<i;j++)
+		{
+			if(ptr.num==num){
+				System.out.println("The number is at pos "+h);
+			}
+		ptr=ptr.next;}
+	}
+	
+public void sort(){
+	
+	for(int k=1;k<i;k++){
+		node ptr=First;
+		
+	for(j=1;j<i;j++)
+	{
+		node a=ptr;
+		node b=ptr.next;
+		if(a.num>b.num){
+		int x=a.num;
+		a.num=b.num;
+		b.num=x;}
+	ptr=ptr.next;}
+	}
+	}
+	public void update(int num,int pos,int val){
+		node ptr=First;
+	    index(num);
+	    pos=h;
+		for(j=1;j<i;j++){
+			if(j==pos)
+			{
+				ptr.num=val;
+			}
+		ptr=ptr.next;}
+		
+	}
+	public void display(){
+        if (i == 0) 
+
+        {
+
+            System.out.println("empty");
+
+            return;
+        }
+       
+ node ptr=First;
+ System.out.print(First.num+ " ");
+
+ ptr = First.next;
+        
+    while (ptr.next != null)
+
+    {
+
+        System.out.print(ptr.num+ " ");
+
+        ptr= ptr.next;
+
+    }
+    System.out.println(ptr.num);
+	}
+}
+
+
+11)Add show all
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		asadList MyList = new asadList();
+		MyList.add(2);
+		MyList.add(3);
+		MyList.add(5);
+		MyList.add(10);
+		MyList.ShowAll();
+		MyList.Search(2);
+	}
+
+}
+
+
+public class linkNode {
+
+	int val;
+	linkNode add;
+}
+
+
+public class asadList {
+	public linkNode list;
+	public void add(int val)
+	{
+		linkNode temp;
+		if (list == null)
+		{
+			list = new linkNode();
+			list.val=val;
+		}
+		else
+		{
+			temp=list;
+			list=new linkNode();
+			list.val=val;
+			list.add=temp;
+			//temp.add=list;
+			temp = list;
+			
+		}
+	}
+	public void ShowAll()
+	{
+		linkNode temp;
+		temp=list;
+		while (temp.add !=null)
+		{
+			System.out.println(temp.val);
+			temp=temp.add;
+		}
+		System.out.println(temp.val);
+	}
+	public void Search(int snum)
+	{
+		linkNode temp;
+		temp=list;
+		while (temp.add !=null)
+		{
+			if (list.val==snum)
+				System.out.println("Exists");
+			temp=temp.add;
+		}
+	}
+	
+}
+
+
+
+
+
+
+
